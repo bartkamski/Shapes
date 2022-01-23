@@ -212,5 +212,21 @@ public class Main {
             System.out.println();
         }
         System.out.println();
+        
+                //Koło
+        System.out.println("Koło");
+        for(int i = 0; i < wymiar; i++) {
+            for(int j = 0; j < wymiar; j++) {
+                if (Math.sqrt(((i - (wymiar / 2)) ^ 2) + ((j - (wymiar / 2)) ^ 2))<wymiar / 2){
+                    System.out.print("X" + " ");
+                }
+                else {
+
+                    System.out.print("O" + " ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
     }
 }
