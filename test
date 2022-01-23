@@ -1,0 +1,216 @@
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+        int wymiar = 7;
+
+        // Środek
+        System.out.println("Środek");
+        for(int i = 0; i < wymiar; i++) {
+            for(int j = 0; j < wymiar; j++) {
+                if (i==wymiar/2 && j==wymiar/2){
+                    System.out.print("X" + " ");
+                }
+                else {
+
+                    System.out.print("O" + " ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+        //Kolumny w paski
+        System.out.println("Kolumny w paski");
+        for(int i = 0; i < wymiar; i++) {
+            for(int j = 0; j < wymiar; j++) {
+                if (j%2==0){
+                    System.out.print("X" + " ");
+                }
+                else {
+
+                    System.out.print("O" + " ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+        //Wiersze w paski
+        System.out.println("Wiersze w paski");
+        for(int i = 0; i < wymiar; i++) {
+            for(int j = 0; j < wymiar; j++) {
+                if (i%2==1){
+                    System.out.print("X" + " ");
+                }
+                else {
+
+                    System.out.print("O" + " ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+        //Przekątna 1
+        System.out.println("Przekątna 1");
+        for(int i = 0; i < wymiar; i++) {
+            for(int j = 0; j < wymiar; j++) {
+                if (i==j){
+                    System.out.print("X" + " ");
+                }
+                else {
+
+                    System.out.print("O" + " ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+        //Przekątna 2
+        System.out.println("Przekątna 2");
+        for(int i = 0; i < wymiar; i++) {
+            for(int j = 0; j < wymiar; j++) {
+                if (i==Math.abs(j-wymiar+1)){
+                    System.out.print("X" + " ");
+                }
+                else {
+
+                    System.out.print("O" + " ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+        //Przekątne
+        System.out.println("Przekątne");
+        for(int i = 0; i < wymiar; i++) {
+            for(int j = 0; j < wymiar; j++) {
+                if (i==Math.abs(j-wymiar+1) || i==j){
+                    System.out.print("X" + " ");
+                }
+                else {
+
+                    System.out.print("O" + " ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+        //Kwadrat
+        System.out.println("Kwadrat");
+        for(int i = 0; i < wymiar; i++) {
+            for(int j = 0; j < wymiar; j++) {
+                if (i==0 || i==wymiar-1 || j==0 || j==wymiar-1){
+                    System.out.print("X" + " ");
+                }
+                else {
+
+                    System.out.print("O" + " ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+        //Kwadrat z marginesem
+        System.out.println("Kwadrat z marginesem");
+        for(int i = 0; i < wymiar; i++) {
+            for(int j = 0; j < wymiar; j++) {
+                if (i==1 && j!=0 && j!=wymiar-1 || i==wymiar-2 && j!=0 && j!=wymiar-1 || j==1 && i!=0 && i!=wymiar-1 || j==wymiar-2 && i!=0 && i!=wymiar-1){
+                    System.out.print("X" + " ");
+                }
+                else {
+
+                    System.out.print("O" + " ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+        //Na zmianę
+        System.out.println("Na zmianę");
+        for(int i = 0; i < wymiar; i++) {
+            for(int j = 0; j < wymiar; j++) {
+                if (i%2==0 && j%2==0 || i%2==1 && j%2==1){
+                    System.out.print("X" + " ");
+                }
+                else {
+
+                    System.out.print("O" + " ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+        //Romb
+        System.out.println("Romb");
+        for(int i = 0; i < wymiar; i++) {
+            for(int j = 0; j < wymiar; j++) {
+                if (i>wymiar/2+j || i<wymiar/2-j || j>wymiar/2+i || j<wymiar/2-i){
+                    System.out.print("X" + " ");
+                }
+                else {
+
+                    System.out.print("O" + " ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+        //Przekątna z wypełnieniem
+        System.out.println("Przekątna z wypełnieniem");
+        for(int i = 0; i < wymiar; i++) {
+            for(int j = 0; j < wymiar; j++) {
+                if (i>=j){
+                    System.out.print("X" + " ");
+                }
+                else {
+
+                    System.out.print("O" + " ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+        //Narożniki
+        System.out.println("Narożniki");
+        for(int i = 0; i < wymiar; i++) {
+            for(int j = 0; j < wymiar; j++) {
+                if (i==0 && j==0 || i==0 && j==wymiar-1 || i==wymiar-1 && j==0 || i==wymiar-1 && j==wymiar-1){
+                    System.out.print("X" + " ");
+                }
+                else {
+
+                    System.out.print("O" + " ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+        //Kratka
+        System.out.println("Kratka");
+        for(int i = 0; i < wymiar; i++) {
+            for(int j = 0; j < wymiar; j++) {
+                if (i%2==0 && j%2==1 || i%2==1){
+                    System.out.print("X" + " ");
+                }
+                else {
+
+                    System.out.print("O" + " ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+}
